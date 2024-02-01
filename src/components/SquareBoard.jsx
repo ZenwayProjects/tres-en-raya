@@ -1,9 +1,8 @@
-import { Square } from "./Square";
-
+import { Square } from "./Square"
 export function SquareBoard({ board, updateBoard }) {
     return (
-        <>
-            {board.map((square, index) => (
+        board.map((square, index) => {
+            return (
                 <Square
                     key={index}
                     index={index}
@@ -11,7 +10,8 @@ export function SquareBoard({ board, updateBoard }) {
                 >
                     {square}
                 </Square>
-            ))}
-        </>
-    );
+            )
+        })
+    )
+
 }
